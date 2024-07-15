@@ -1,12 +1,14 @@
 {
-  "name": "expo-backups-demo",
+  "name": "upback",
   "version": "1.0.0",
-  "main": "expo/AppEntry.js",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "setup": "bash scripts/setup.sh",
+    "android": "expo run:android",
+    "android:prod": "expo run:android --variant release",
+    "ios": "npx pod-install && expo run:ios",
+    "ios:prod": "npx pod-install && expo run:ios --configuration Release",
+    "lint": "eslint '**/*.tsx'"
   },
   "dependencies": {
     "expo": "~51.0.20",
