@@ -11,9 +11,22 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.timmyjose.expobackupsdemo"
+      "bundleIdentifier": "com.timmyjose.expobackupsdemo",
+      "entitlements": {
+        "com.apple.developer.icloud-container-identifiers": [
+          "iCloud.com.timmyjose.expobackupsdemo"
+        ],
+        "com.apple.developer.icloud-services": [
+          "CloudKit",
+          "CloudDocuments"
+        ],
+        "com.apple.developer.ubiquity-kvstore-identifier": "$(TeamIdentifierPrefix)$(CFBundleIdentifier)"
+      }
     },
     "android": {
       "adaptiveIcon": {

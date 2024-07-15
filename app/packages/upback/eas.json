@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 10.1.1"
+    "version": ">= 10.1.1",
+    "appVersionSource": "remote"
   },
   "build": {
     "development": {
@@ -10,9 +11,21 @@
     "preview": {
       "distribution": "internal"
     },
-    "production": {}
+    "preview-sim": {
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "ascAppId": "6544800228"
+      }
+    }
   }
 }
